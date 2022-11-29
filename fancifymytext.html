@@ -13,20 +13,21 @@
 		<!-- Your UI controls go here -->
 			<fieldset>
 				<legend>Text</legend>
-				<textarea id ='textArea' rows="4" cols="30"></textarea>
+				<textarea id ='textArea' rows="4" cols="30" placeholder="Enter Text Here"></textarea>
 			</fieldset>
 
 			<fieldset>
 				<legend>Fancify</legend>
-				<button id="bigger" type="button">Biggify</button>
+				<button id="bigger" type="button" onclick="bigger()">Bigger!</button>
 				<form>
-					<input id="FancyShmancy" onchange="fancify" type="radio" value="FancyShmancy" name="fancyshamncy">
+					<input id="FancyShmancy" type="radio" value="FancyShmancy"onchange="fancify">
 					<label for="FancyShmancy">FancySchmancy</label>
-					<input id="BoringBetty" onchange="borify" type="radio" value="BoringBetty" name="borify">
+		
+					<input id="BoringBetty" type="radio" value="BoringBetty" onchange="borify()">
 					<label for="BoringBetty">BoringBetty</label>
 				</form>
 
-				<button type="button" id="Moo">Moo</button>
+				<button id="Moo" type="button" value="Moo" onclick="moo()">Moo</button>
 			</fieldset>
 		
 		<script src="fancifymytext.js"></script>

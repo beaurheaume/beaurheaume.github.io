@@ -3,7 +3,12 @@ document.getElementById("FancyShmancy").addEventListener("click",fancify);
 document.getElementById("BoringBetty").addEventListener("click",borify);
 document.getElementById("Moo").addEventListener("click",moo);
 
+// function alertBox(){
+//     alert("You've been alerted!");
+// }
+
 function bigger(){
+    alert("Let's Get Bigger!");
     document.getElementById("textArea").style.fontSize="24pt";
 }
 
@@ -22,23 +27,9 @@ function borify(){
 }
 
 function moo(){
-    var text = document.getElementById("textArea").value;
-    var result = text.toUpperCase();
-    document.getElementById("textArea").value = result;
-    
-    var parts = result.split(" ");
-
-    var i;
-    for(i=0; i < parts.length;i++){
-        var tmp = parts[i].toUpperCase();
-        parts[i] = tmp;
-
-        if(parts[i].includes(".")){
-            tmp = parts[i].slice(0, -1);
-            parts[i] = tmp.concat("-Moo.");
-        }
-    }
-
-    var str = parts.join("_");
-    document.getElementById("textArea").value = str;
+    let text = document.getElementById("textArea");
+    let upperCased = text.value.toUpperCase();
+    let message = upperCased.split(".");
+    let moo = message.join(" -Moo");
+    text.value = moo;
 }
